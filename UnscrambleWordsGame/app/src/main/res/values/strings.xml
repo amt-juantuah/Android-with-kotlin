@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Unscramble Words Game</string>
+    <string name="score">Score: %1$s</string>
+    <string name="instruction">Unscramble the word using all the letters</string>
+    <string name="enter_your_word">Enter your word</string>
+    <string name="submit">Submit</string>
+    <string name="skip">Skip</string>
+    <string name="congratulations">Congratulations🎉🎉 You won!!</string>
+    <string name="exit">Exit</string>
+    <string name="play_again">Play Again</string>
+    <string name="unscramble">Unscramble</string>
+    <string name="wrong_guess">Wrong Guess. Next Word!</string>
+    <string name="game_count">%1$s/%2$s</string>
+    <string name="game_score">You scored: %1$s</string>
+    <string name="sorry_mate_try_again">Sorry Mate! 😞 Try Again!</string>
+</resources>
