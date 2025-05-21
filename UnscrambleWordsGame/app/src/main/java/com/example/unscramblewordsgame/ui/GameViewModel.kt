@@ -22,7 +22,7 @@ class GameViewModel : ViewModel() {
     private var usedWords: MutableSet<String> = mutableSetOf()
 
     // current word
-    private var currentWord: String = ""
+    private lateinit var currentWord: String
 
     // user guess word
     var userGuess by mutableStateOf("")
@@ -69,8 +69,13 @@ class GameViewModel : ViewModel() {
         updateUserGuess("")
         _uiState.update { currentState ->
             currentState.copy(
+                // set game over as true
                 gameOver = true,
+
+                // don't check wrong guess
                 isGuessedWordWrong = false,
+
+                // no new word to be guessed again
                 currentScrambledWord = ""
             )
         }
@@ -149,6 +154,7 @@ class GameViewModel : ViewModel() {
         userGuess  = userInput
     }
 
+    // reset the game to start
     fun resetGame() {
         usedWords.clear()
         _uiState.value = GameUiState(

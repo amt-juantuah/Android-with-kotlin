@@ -1,8 +1,8 @@
 package com.example.unscramblewordsgame.data
 
-val SCORE_INCREMENT = 1
-val MAX_GAME_COUNT = 10
-val WINNING_MARK = 7
+const val SCORE_INCREMENT = 1
+const val MAX_GAME_COUNT = 10
+const val WINNING_MARK = 7
 
 object WordLists {
     private val list1 = listOf("jaguar", "cougar", "leopard", "bobcat", "tiger", "ocelot", "panther", "lynx", "lion", "cheetah")
@@ -20,7 +20,21 @@ object WordLists {
         list1, list2, list3, list4, list5, list6, list7, list8, list9, list10
     )
 
-    val allWords = allLists.flatten()
+//    val allWords = allLists.flatten()
+
+    val allWords: Set<String> =
+        setOf(
+            "at",
+            "sea",
+            "home",
+            "arise",
+            "banana",
+            "android",
+            "birthday",
+            "briefcase",
+            "motorcycle",
+            "cauliflower"
+        )
 
     fun generateRandomList(): List<String> {
         return allLists.random()
