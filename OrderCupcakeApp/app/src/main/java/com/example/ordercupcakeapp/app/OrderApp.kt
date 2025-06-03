@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -20,6 +21,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.ordercupcakeapp.R
 import com.example.ordercupcakeapp.data.DataSource
+import com.example.ordercupcakeapp.ui.components.AppBar
 import com.example.ordercupcakeapp.ui.pages.ChooseFlavour
 import com.example.ordercupcakeapp.ui.pages.OrderSummary
 import com.example.ordercupcakeapp.ui.pages.PickupDate
@@ -44,7 +46,11 @@ fun OrderApp(
     )
 
     Scaffold (
-        topBar = {},
+        topBar = { AppBar(
+            currentScreen = currentScreen,
+            canNavigateBack = navController.previousBackStackEntry != null,
+            navigateUp = { navController.navigateUp() }
+        ) },
         modifier = modifier.fillMaxSize()
     ){ innerPadding ->
 

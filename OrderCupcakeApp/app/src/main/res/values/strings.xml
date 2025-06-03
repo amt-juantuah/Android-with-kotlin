@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Order Cupcake App</string>
+    <string name="app_name">Order Cupcake</string>
     <string name="vanilla">Vanilla</string>
     <string name="coffee">Coffee</string>
     <string name="chocolate">Chocolate</string>
@@ -25,4 +25,5 @@
     <string name="new_cupcake_order">New Cupcake Order</string>
     <string name="summary">Number of Cupcakes: %1$s\nFlavour: %2$s\nPickup Date: %3$s\nTotal: £%4$s</string>
     <string name="your_order_details">Your Order Details</string>
+    <string name="go_back">go back</string>
 </resources>
