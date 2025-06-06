@@ -49,7 +49,6 @@ fun GameLayout(
     gameOver: Boolean,
     restartGame: () -> Unit
 ) {
-//    var inputWord by remember { mutableStateOf("") }
 
     Column(
         verticalArrangement = Arrangement.Center,

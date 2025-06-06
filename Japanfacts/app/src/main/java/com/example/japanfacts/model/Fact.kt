@@ -1,3 +1,11 @@
 package com.example.japanfacts.model
 
-data class Fact()
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
+data class Fact(
+    @DrawableRes val imageRes: Int,
+    @StringRes val titleRes: Int,
+    @StringRes val factDetailsRes: Int,
+    @StringRes val factDay: Int
+)
